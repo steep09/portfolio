@@ -9,22 +9,22 @@
 import UIKit
 
 class SignInViewController: UIViewController {
+    
+    @IBOutlet weak var signInBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        signInBtn.buttonUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func signUpBtnWasPressed(_ sender: Any) {
+        guard let signUp = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
+        self.present(signUp, animated: true, completion: nil)
+    }
 
 }

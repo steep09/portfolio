@@ -21,9 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if Auth.auth().currentUser == nil {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let HomeTab = storyboard.instantiateViewController(withIdentifier: "HomeTabViewController")
+            let WelcomeView = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
             window?.makeKeyAndVisible()
-            window?.rootViewController?.present(HomeTab, animated: true, completion: nil)
+            window?.rootViewController?.present(WelcomeView, animated: true, completion: nil)
         }
         
         return true

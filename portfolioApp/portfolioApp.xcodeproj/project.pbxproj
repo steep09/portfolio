@@ -14,6 +14,8 @@
 		A70448022348407700AA06D9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70448012348407700AA06D9 /* WelcomeViewController.swift */; };
 		A70448042348409200AA06D9 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70448032348409200AA06D9 /* SignInViewController.swift */; };
 		A7044806234840B800AA06D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7044805234840B800AA06D9 /* SignUpViewController.swift */; };
+		A704480923484EE100AA06D9 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704480823484EE100AA06D9 /* UIImage.swift */; };
+		A704480B2348510600AA06D9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704480A2348510600AA06D9 /* UIButton.swift */; };
 		A72251B52347E811001A365C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72251B42347E811001A365C /* AppDelegate.swift */; };
 		A72251B72347E811001A365C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72251B62347E811001A365C /* SceneDelegate.swift */; };
 		A72251B92347E811001A365C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72251B82347E811001A365C /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 		A70448012348407700AA06D9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A70448032348409200AA06D9 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A7044805234840B800AA06D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A704480823484EE100AA06D9 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		A704480A2348510600AA06D9 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		A72251B12347E811001A365C /* portfolioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portfolioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72251B42347E811001A365C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A72251B62347E811001A365C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,9 @@
 		A70447F423483F0F00AA06D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A704480723484EB500AA06D9 /* SubViews */,
+				A704480A2348510600AA06D9 /* UIButton.swift */,
+				A704480823484EE100AA06D9 /* UIImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -151,6 +158,13 @@
 				A7044805234840B800AA06D9 /* SignUpViewController.swift */,
 			);
 			path = SignUpScreen;
+			sourceTree = "<group>";
+		};
+		A704480723484EB500AA06D9 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		A72251A82347E811001A365C = {
@@ -310,7 +324,9 @@
 				A7044806234840B800AA06D9 /* SignUpViewController.swift in Sources */,
 				A70447FA23483FDF00AA06D9 /* HomeTabViewController.swift in Sources */,
 				A72251B52347E811001A365C /* AppDelegate.swift in Sources */,
+				A704480B2348510600AA06D9 /* UIButton.swift in Sources */,
 				A70448022348407700AA06D9 /* WelcomeViewController.swift in Sources */,
+				A704480923484EE100AA06D9 /* UIImage.swift in Sources */,
 				A70447FC2348400600AA06D9 /* ServiceViewController.swift in Sources */,
 				A72251B72347E811001A365C /* SceneDelegate.swift in Sources */,
 			);

@@ -9,22 +9,21 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
+    
+    @IBOutlet weak var imageBtn: UIButton!
+    @IBOutlet weak var imageProfile: UIImageView!
+    @IBOutlet weak var signUpBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        imageProfile.layer.cornerRadius = 50.0
+        imageBtn.layer.cornerRadius = 50.0
+        signUpBtn.buttonUI()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backBtnWasPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
 
 }
