@@ -22,8 +22,17 @@ class SignInViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func signInBtnWasPressed(_ sender: Any) {
+        guard let homeView = storyboard?.instantiateViewController(withIdentifier: "HomeTab") as? UITabBarController else { return }
+        homeView.modalPresentationStyle = .overCurrentContext
+        homeView.definesPresentationContext = true
+        self.show(homeView, sender: self)
+        print("BUTTON PRESSED")
+    }
+    
     @IBAction func signUpBtnWasPressed(_ sender: Any) {
         guard let signUp = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else { return }
+        signUp.modalPresentationStyle = .fullScreen
         self.present(signUp, animated: true, completion: nil)
     }
 

@@ -20,6 +20,7 @@ class WelcomeViewController: UIViewController {
     
     @IBAction func welcomeBtnWasPressed(_ sender: Any) {
         guard let signIn = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
+        signIn.modalPresentationStyle = .fullScreen
         self.present(signIn, animated: true) {
             
         }
