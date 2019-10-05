@@ -16,6 +16,7 @@
 		A7044806234840B800AA06D9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7044805234840B800AA06D9 /* SignUpViewController.swift */; };
 		A704480923484EE100AA06D9 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704480823484EE100AA06D9 /* UIImage.swift */; };
 		A704480B2348510600AA06D9 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704480A2348510600AA06D9 /* UIButton.swift */; };
+		A704480E2348772500AA06D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A704480D2348772500AA06D9 /* User.swift */; };
 		A72251B52347E811001A365C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72251B42347E811001A365C /* AppDelegate.swift */; };
 		A72251B72347E811001A365C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72251B62347E811001A365C /* SceneDelegate.swift */; };
 		A72251B92347E811001A365C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72251B82347E811001A365C /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 		A7044805234840B800AA06D9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		A704480823484EE100AA06D9 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		A704480A2348510600AA06D9 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		A704480D2348772500AA06D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A72251B12347E811001A365C /* portfolioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portfolioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72251B42347E811001A365C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A72251B62347E811001A365C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		A70447F523483F1400AA06D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A704480C2348770C00AA06D9 /* Users */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +168,14 @@
 			children = (
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		A704480C2348770C00AA06D9 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				A704480D2348772500AA06D9 /* User.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		A72251A82347E811001A365C = {
@@ -329,6 +340,7 @@
 				A704480923484EE100AA06D9 /* UIImage.swift in Sources */,
 				A70447FC2348400600AA06D9 /* ServiceViewController.swift in Sources */,
 				A72251B72347E811001A365C /* SceneDelegate.swift in Sources */,
+				A704480E2348772500AA06D9 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

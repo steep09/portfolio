@@ -131,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-GA-go2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yTr-GA-go2">
                                 <rect key="frame" x="20" y="327" width="374" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -226,6 +226,8 @@
                         <viewLayoutGuide key="safeArea" id="V7z-YU-O11"/>
                     </view>
                     <connections>
+                        <outlet property="emailAddressTxtField" destination="6tQ-NX-uV9" id="hJ7-W4-ETb"/>
+                        <outlet property="passwordTxtField" destination="gW6-zz-T4e" id="6qP-dr-tBs"/>
                         <outlet property="signInBtn" destination="LbT-6V-PSL" id="WWp-FC-Xpg"/>
                     </connections>
                 </viewController>
@@ -241,7 +243,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoQ-TX-b3h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoQ-TX-b3h">
                                 <rect key="frame" x="20" y="140" width="374" height="60"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
@@ -353,8 +355,13 @@
                         <viewLayoutGuide key="safeArea" id="ovv-29-Rg9"/>
                     </view>
                     <connections>
+                        <outlet property="contactNumberTxtField" destination="nQ8-NG-meH" id="lah-XW-NAa"/>
+                        <outlet property="emailAddressTxtField" destination="Bd8-DG-y2W" id="MDI-Qd-vC4"/>
+                        <outlet property="firstNameTxtField" destination="oDC-DN-CBw" id="pSO-yV-2l1"/>
                         <outlet property="imageBtn" destination="3Od-gm-2BA" id="VKS-eR-eH3"/>
                         <outlet property="imageProfile" destination="oWi-u7-838" id="mqK-Qv-1sF"/>
+                        <outlet property="lastNameTxtField" destination="e62-IF-Y6p" id="rAA-3f-lSy"/>
+                        <outlet property="passwordTxtField" destination="y9Z-fE-9Ul" id="oP8-sv-G13"/>
                         <outlet property="signUpBtn" destination="lqC-lR-Axe" id="cdm-Kg-dUg"/>
                     </connections>
                 </viewController>

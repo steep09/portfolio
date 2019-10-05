@@ -13,6 +13,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var imageBtn: UIButton!
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var signUpBtn: UIButton!
+    
+    @IBOutlet weak var firstNameTxtField: UITextField!
+    @IBOutlet weak var lastNameTxtField: UITextField!
+    @IBOutlet weak var contactNumberTxtField: UITextField!
+    @IBOutlet weak var emailAddressTxtField: UITextField!
+    @IBOutlet weak var passwordTxtField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
