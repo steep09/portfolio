@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		929B632D52D48353A02F4630 /* Pods_portfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788ACABA774EA8950A59845 /* Pods_portfolioApp.framework */; };
+		A70268A32349A71200212E14 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70268A22349A71200212E14 /* UserManager.swift */; };
+		A70268A52349B05100212E14 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70268A42349B05100212E14 /* UIViewController.swift */; };
 		A70447F223483ACD00AA06D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A70447F123483ACD00AA06D9 /* GoogleService-Info.plist */; };
 		A70447FA23483FDF00AA06D9 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70447F923483FDF00AA06D9 /* HomeTabViewController.swift */; };
 		A70447FC2348400600AA06D9 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70447FB2348400500AA06D9 /* ServiceViewController.swift */; };
@@ -29,6 +31,8 @@
 		058B979F78612E5CF7F7494A /* Pods-portfolioApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolioApp.release.xcconfig"; path = "Target Support Files/Pods-portfolioApp/Pods-portfolioApp.release.xcconfig"; sourceTree = "<group>"; };
 		309A23426A7F77C25E01B0E8 /* Pods-portfolioApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-portfolioApp.debug.xcconfig"; path = "Target Support Files/Pods-portfolioApp/Pods-portfolioApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6788ACABA774EA8950A59845 /* Pods_portfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70268A22349A71200212E14 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		A70268A42349B05100212E14 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		A70447F123483ACD00AA06D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A70447F923483FDF00AA06D9 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		A70447FB2348400500AA06D9 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A70268A12349A6FE00212E14 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A70268A22349A71200212E14 /* UserManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		A70447F323483F0500AA06D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				A704480723484EB500AA06D9 /* SubViews */,
-				A704480A2348510600AA06D9 /* UIButton.swift */,
-				A704480823484EE100AA06D9 /* UIImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +188,16 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
+		A7066D3B234AD67C00307808 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A704480823484EE100AA06D9 /* UIImage.swift */,
+				A704480A2348510600AA06D9 /* UIButton.swift */,
+				A70268A42349B05100212E14 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A72251A82347E811001A365C = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +220,8 @@
 		A72251B32347E811001A365C /* portfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				A7066D3B234AD67C00307808 /* Extensions */,
+				A70268A12349A6FE00212E14 /* Managers */,
 				A70447F523483F1400AA06D9 /* Models */,
 				A70447F423483F0F00AA06D9 /* Views */,
 				A70447F323483F0500AA06D9 /* Controllers */,
@@ -226,6 +248,7 @@
 				A72251AE2347E811001A365C /* Frameworks */,
 				A72251AF2347E811001A365C /* Resources */,
 				BD03C20ABD089141B3FFB384 /* [CP] Embed Pods Frameworks */,
+				E90C1699B1B4BE2CE0CBBBE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,6 +346,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-portfolioApp/Pods-portfolioApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E90C1699B1B4BE2CE0CBBBE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-portfolioApp/Pods-portfolioApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-portfolioApp/Pods-portfolioApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-portfolioApp/Pods-portfolioApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -336,6 +376,8 @@
 				A70447FA23483FDF00AA06D9 /* HomeTabViewController.swift in Sources */,
 				A72251B52347E811001A365C /* AppDelegate.swift in Sources */,
 				A704480B2348510600AA06D9 /* UIButton.swift in Sources */,
+				A70268A32349A71200212E14 /* UserManager.swift in Sources */,
+				A70268A52349B05100212E14 /* UIViewController.swift in Sources */,
 				A70448022348407700AA06D9 /* WelcomeViewController.swift in Sources */,
 				A704480923484EE100AA06D9 /* UIImage.swift in Sources */,
 				A70447FC2348400600AA06D9 /* ServiceViewController.swift in Sources */,

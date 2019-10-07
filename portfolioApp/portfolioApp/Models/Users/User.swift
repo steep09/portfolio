@@ -10,10 +10,24 @@ import Foundation
 
 struct User {
     
-    var firstName: String
-    var lastName: String
-    var contactNumber: String
+    var firstName: String?
+    var lastName: String?
+    var countryCode: String?
+    var mobileNumber: String?
     var emailAddress: String
-    var password: String
+    var profileImage: String?
+    
+    init(firstName: String, lastName: String, countryCode: String, mobileNumber: String, emailAddress: String, profileImage: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        self.countryCode = countryCode
+        self.mobileNumber = mobileNumber
+        self.emailAddress = emailAddress
+        self.profileImage = profileImage
+    }
+    
+    func completeMobileNumber() -> String {
+        return "\(countryCode)\(mobileNumber)"
+    }
     
 }

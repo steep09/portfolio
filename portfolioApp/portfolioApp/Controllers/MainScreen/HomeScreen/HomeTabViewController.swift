@@ -7,24 +7,36 @@
 //
 
 import UIKit
+import GoogleMaps
+import Firebase
 
 class HomeTabViewController: UIViewController {
+    
+    @IBOutlet weak var mapView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        mapView.layer.masksToBounds = false
+        mapView.layer.shadowOpacity = 1
+        mapView.layer.shadowRadius = 5
+        mapView.layer.shadowOffset = .zero
+        mapView.layer.borderWidth = 5
+        mapView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func signOutBtnWasPressed(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
     }
-    */
-
+    
 }

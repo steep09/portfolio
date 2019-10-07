@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,11 +20,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         
+        //This API Key is for GoogleMaps pod.
+        // here is the link https://developers.google.com/maps/documentation/ios-sdk/views
+        GMSServices.provideAPIKey("AIzaSyBpswBL_Owef-P5PvubLf2N2R9FNogWwqs")
+        
         if Auth.auth().currentUser == nil {
+            print("No Current User")
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let WelcomeView = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
             window?.makeKeyAndVisible()
             window?.rootViewController?.present(WelcomeView, animated: true, completion: nil)
+        } else {
+            print("User Currently Logged In")
         }
         
         return true
