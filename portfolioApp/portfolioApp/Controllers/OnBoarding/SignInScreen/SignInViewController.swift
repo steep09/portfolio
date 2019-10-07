@@ -12,6 +12,9 @@ import FirebaseFirestore
 
 class SignInViewController: UIViewController {
     
+    @IBOutlet weak var toastMessageView: UIView!
+    @IBOutlet weak var toastMessageTxt: UILabel!
+    
     @IBOutlet weak var signInBtn: UIButton!
     
     @IBOutlet weak var emailAddressTxtField: UITextField!
@@ -23,6 +26,8 @@ class SignInViewController: UIViewController {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
+        
+        toastMessageView.layer.cornerRadius = 10.0
         
         passwordTxtField.isSecureTextEntry = true
         signInBtn.buttonUI()
@@ -38,7 +43,9 @@ class SignInViewController: UIViewController {
         //            user.loginUser(withEmail: emailAddressTxtField.text!, andPassword: passwordTxtField.text!)
             Auth.auth().signIn(withEmail: emailAddressTxtField.text!, password: passwordTxtField.text!) { (result, error) in
                 if error != nil {
-                    print("ERROR: \(error)")
+                    print("ERROR: \(error ?? nil)")
+                    self.toastMessageTxt.text = "PLEASE INPUT EMAIL AND PASSWORD"
+                    self.toastMessageView.showToastMessage(message: "PLEASE INPUT EMAIL AND PASSWORD")
                 } else {
                     guard let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeTab") as? UITabBarController else { return }
                     homeView.modalPresentationStyle = .overCurrentContext
@@ -50,6 +57,8 @@ class SignInViewController: UIViewController {
                 }
             }
         } else {
+            toastMessageTxt.text = "PLEASE INPUT EMAIL AND PASSWORD"
+            toastMessageView.showToastMessage(message: "PLEASE INPUT EMAIL AND PASSWORD")
             print("PLEASE INPUT EMAIL AND PASSWORD")
         }
     }

@@ -14,6 +14,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var imageProfile: UIImageView!
     @IBOutlet weak var signUpBtn: UIButton!
     
+    @IBOutlet weak var toastMessageView: UIView!
+    @IBOutlet weak var toastMessageTxt: UILabel!
+    
     @IBOutlet weak var firstNameTxtField: UITextField!
     @IBOutlet weak var lastNameTxtField: UITextField!
     @IBOutlet weak var countryCodeBtn: UIButton!
@@ -25,10 +28,16 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.delegate = self
 
+        countryCodeBtn.layer.cornerRadius = 5.0
+        
         imageProfile.layer.cornerRadius = 50.0
         imageBtn.layer.cornerRadius = 50.0
         signUpBtn.buttonUI()
+        
+        toastMessageView.layer.cornerRadius = 10.0
         
         passwordTxtField.isSecureTextEntry = true
         self.hideKeyboardWhenTappedAround()
@@ -37,6 +46,17 @@ class SignUpViewController: UIViewController {
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func imageBtnWasPressed(_ sender: Any) {
+        
+        print("Image Button was pressed")
+        
+        let vc = UIImagePickerController()
+        vc.sourceType = .camera
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
     }
     
     @IBAction func signUpBtnWasPressed(_ sender: Any) {
@@ -62,15 +82,39 @@ class SignUpViewController: UIViewController {
                     
                     self.userManager.createUser(withEmail: emailAddressTxtField.text!, andPassword: passwordTxtField.text!, users: user)
                 } else {
+                    self.toastMessageTxt.text = "Password must contain at least 6 characters"
+                    self.toastMessageView.showToastMessage(message: "Password must contain at least 6 characters")
                     print("Password must contain at least 6 characters")
                 }
             } else {
+                self.toastMessageTxt.text = "The format of your email is wrong"
+                self.toastMessageView.showToastMessage(message: "The format of your email is wrong")
                 print("The format of your email is wrong")
             }
         } else {
+            self.toastMessageTxt.text = "PLEASE FILL UP ALL TEXTFIELDS"
+            self.toastMessageView.showToastMessage(message: "PLEASE FILL UP ALL TEXTFIELDS")
             print("PLEASE FILL UP ALL TEXTFIELDS")
         }
         
     }
 
+}
+
+extension SignUpViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+    didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey :
+    Any]) {
+        
+        self.imageProfile.isHidden = false
+//        self.imageBtn.isHidden = false
+        
+        if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            self.imageProfile.image = img
+            self.dismiss(animated: true, completion: nil)
+        } else {
+            print("error")
+        }
+    }
 }
