@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class WelcomeViewController: UIViewController {
     
@@ -16,14 +17,25 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 
         welcomeBtn.buttonUI()
+        
+        
     }
     
     @IBAction func welcomeBtnWasPressed(_ sender: Any) {
-        guard let signIn = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
-        signIn.modalPresentationStyle = .fullScreen
-        self.present(signIn, animated: true) {
-            
+        
+        if Auth.auth().currentUser != nil {
+            guard let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeTab") as? UITabBarController else { return }
+            homeView.modalPresentationStyle = .overCurrentContext
+            homeView.definesPresentationContext = true
+            self.show(homeView, sender: self)
+        } else {
+            guard let signIn = storyboard?.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
+            signIn.modalPresentationStyle = .fullScreen
+            self.present(signIn, animated: true) {
+                
+            }
         }
+        
         
     }
 

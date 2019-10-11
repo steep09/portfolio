@@ -27,7 +27,7 @@ struct User {
     }
     
     func completeMobileNumber() -> String {
-        return "\(countryCode)\(mobileNumber)"
+        return "\(countryCode ?? "")\(mobileNumber ?? "")"
     }
     
 }
