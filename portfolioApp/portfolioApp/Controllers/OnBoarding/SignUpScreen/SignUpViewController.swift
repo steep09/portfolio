@@ -82,18 +82,15 @@ class SignUpViewController: UIViewController {
                     
                     self.userManager.createUser(withEmail: emailAddressTxtField.text!, andPassword: passwordTxtField.text!, users: user)
                 } else {
-                    self.toastMessageTxt.text = "Password must contain at least 6 characters"
-                    self.toastMessageView.showToastMessage(message: "Password must contain at least 6 characters")
+                    self.toastMessageView.showToastMessage(label: self.toastMessageTxt, message: "Password must contain at least 6 characters")
                     print("Password must contain at least 6 characters")
                 }
             } else {
-                self.toastMessageTxt.text = "The format of your email is wrong"
-                self.toastMessageView.showToastMessage(message: "The format of your email is wrong")
+                self.toastMessageView.showToastMessage(label: self.toastMessageTxt, message: "The format of your email is wrong")
                 print("The format of your email is wrong")
             }
         } else {
-            self.toastMessageTxt.text = "PLEASE FILL UP ALL TEXTFIELDS"
-            self.toastMessageView.showToastMessage(message: "PLEASE FILL UP ALL TEXTFIELDS")
+            self.toastMessageView.showToastMessage(label: self.toastMessageTxt, message: "PLEASE FILL UP ALL TEXTFIELDS")
             print("PLEASE FILL UP ALL TEXTFIELDS")
         }
         

@@ -10,6 +10,7 @@
 		929B632D52D48353A02F4630 /* Pods_portfolioApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6788ACABA774EA8950A59845 /* Pods_portfolioApp.framework */; };
 		A70268A32349A71200212E14 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70268A22349A71200212E14 /* UserManager.swift */; };
 		A70268A52349B05100212E14 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70268A42349B05100212E14 /* UIViewController.swift */; };
+		A70383A1234B528200E621F4 /* locationTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70383A0234B528200E621F4 /* locationTrackerViewController.swift */; };
 		A70447F223483ACD00AA06D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A70447F123483ACD00AA06D9 /* GoogleService-Info.plist */; };
 		A70447FA23483FDF00AA06D9 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70447F923483FDF00AA06D9 /* HomeTabViewController.swift */; };
 		A70447FC2348400600AA06D9 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70447FB2348400500AA06D9 /* ServiceViewController.swift */; };
@@ -34,6 +35,7 @@
 		6788ACABA774EA8950A59845 /* Pods_portfolioApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_portfolioApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A70268A22349A71200212E14 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		A70268A42349B05100212E14 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		A70383A0234B528200E621F4 /* locationTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationTrackerViewController.swift; sourceTree = "<group>"; };
 		A70447F123483ACD00AA06D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A70447F923483FDF00AA06D9 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		A70447FB2348400500AA06D9 /* ServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		A703839F234B524800E621F4 /* SubServicesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A70383A0234B528200E621F4 /* locationTrackerViewController.swift */,
+			);
+			path = SubServicesScreen;
+			sourceTree = "<group>";
+		};
 		A70447F323483F0500AA06D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		A70447F823483F5C00AA06D9 /* ServicesScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A703839F234B524800E621F4 /* SubServicesScreen */,
 				A70447FB2348400500AA06D9 /* ServiceViewController.swift */,
 			);
 			path = ServicesScreen;
@@ -383,6 +394,7 @@
 				A70268A32349A71200212E14 /* UserManager.swift in Sources */,
 				A70268A52349B05100212E14 /* UIViewController.swift in Sources */,
 				A70448022348407700AA06D9 /* WelcomeViewController.swift in Sources */,
+				A70383A1234B528200E621F4 /* locationTrackerViewController.swift in Sources */,
 				A704480923484EE100AA06D9 /* UIImage.swift in Sources */,
 				A70447FC2348400600AA06D9 /* ServiceViewController.swift in Sources */,
 				A72251B72347E811001A365C /* SceneDelegate.swift in Sources */,

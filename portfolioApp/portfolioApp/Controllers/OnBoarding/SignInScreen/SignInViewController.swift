@@ -44,21 +44,19 @@ class SignInViewController: UIViewController {
             Auth.auth().signIn(withEmail: emailAddressTxtField.text!, password: passwordTxtField.text!) { (result, error) in
                 if error != nil {
                     print("ERROR: \(error ?? nil)")
-                    self.toastMessageTxt.text = "PLEASE INPUT EMAIL AND PASSWORD"
-                    self.toastMessageView.showToastMessage(message: "PLEASE INPUT EMAIL AND PASSWORD")
+                    self.toastMessageView.showToastMessage(label: self.toastMessageTxt, message: "WRONG EMAIL ADDRESS OR PASSWORD")
                 } else {
+                    print("\(self.emailAddressTxtField.text)")
                     guard let homeView = self.storyboard?.instantiateViewController(withIdentifier: "HomeTab") as? UITabBarController else { return }
                     homeView.modalPresentationStyle = .overCurrentContext
                     homeView.definesPresentationContext = true
                     self.show(homeView, sender: self)
                     print("BUTTON PRESSED")
-                    self.emailAddressTxtField.text = ""
-                    self.passwordTxtField.text = ""
                 }
             }
         } else {
             toastMessageTxt.text = "PLEASE INPUT EMAIL AND PASSWORD"
-            toastMessageView.showToastMessage(message: "PLEASE INPUT EMAIL AND PASSWORD")
+            toastMessageView.showToastMessage(label: self.toastMessageTxt, message: "PLEASE INPUT EMAIL AND PASSWORD")
             print("PLEASE INPUT EMAIL AND PASSWORD")
         }
     }

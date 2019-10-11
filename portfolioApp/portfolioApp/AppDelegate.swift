@@ -24,15 +24,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // here is the link https://developers.google.com/maps/documentation/ios-sdk/views
         GMSServices.provideAPIKey("AIzaSyBpswBL_Owef-P5PvubLf2N2R9FNogWwqs")
         
-        if Auth.auth().currentUser == nil {
-            print("No Current User")
-            let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let WelcomeView = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
-            window?.makeKeyAndVisible()
-            window?.rootViewController?.present(WelcomeView, animated: true, completion: nil)
-        } else {
-            print("User Currently Logged In")
-        }
+        print("NO CURRENT USER: \(Auth.auth().currentUser == nil)")
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        
+        window?.rootViewController?.show(WelcomeViewController(), sender: (Any).self)
+        
+//        if Auth.auth().currentUser == nil {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let welcomeVC: UIViewController = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+//            window?.rootViewController?.present(welcomeVC, animated: true, completion: nil)
+//        } else {
+//            print("Hello \(Auth.auth().currentUser?.email ?? "")")
+//        }
         
         return true
     }

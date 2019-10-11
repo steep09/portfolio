@@ -10,7 +10,10 @@ import UIKit
 
 extension UIView {
     
-    func showToastMessage(message: String) {
+    func showToastMessage(label: UILabel, message: String) {
+        
+        label.text = message
+        
         self.isHidden = false
         self.layer.opacity = 1.0
         closeToastMessageAnimation()

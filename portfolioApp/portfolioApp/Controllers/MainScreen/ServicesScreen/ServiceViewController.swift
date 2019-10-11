@@ -16,15 +16,11 @@ class ServiceViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func locationTrackerBtnWasPressed(_ sender: Any) {
+        
+        guard let locationTracker = self.storyboard?.instantiateViewController(withIdentifier: "locationTrackerViewController") as? UIViewController else { return }
+        locationTracker.modalPresentationStyle = .fullScreen
+        self.present(locationTracker, animated: true)
+        print("BUTTON PRESSED")
     }
-    */
-
 }
