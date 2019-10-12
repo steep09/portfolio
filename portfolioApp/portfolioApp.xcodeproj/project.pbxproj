@@ -27,6 +27,9 @@
 		A72251BC2347E811001A365C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72251BA2347E811001A365C /* Main.storyboard */; };
 		A72251BE2347E813001A365C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72251BD2347E813001A365C /* Assets.xcassets */; };
 		A72251C12347E813001A365C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72251BF2347E813001A365C /* LaunchScreen.storyboard */; };
+		A75A5B3F2350AE830063B7D2 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */; };
+		A75A5B422350AEF40063B7D2 /* countryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B412350AEF40063B7D2 /* countryListCell.swift */; };
+		A75A5B442350AFD60063B7D2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B432350AFD60063B7D2 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		A72251BD2347E813001A365C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72251C02347E813001A365C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72251C22347E813001A365C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
+		A75A5B412350AEF40063B7D2 /* countryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryListCell.swift; sourceTree = "<group>"; };
+		A75A5B432350AFD60063B7D2 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 		A70447F323483F0500AA06D9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A75A5B3D2350AE4D0063B7D2 /* SubControllers */,
 				A70447FD2348401C00AA06D9 /* OnBoarding */,
 				A70447F623483F2C00AA06D9 /* MainScreen */,
 			);
@@ -113,6 +120,7 @@
 		A70447F423483F0F00AA06D9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A75A5B402350AEC70063B7D2 /* Cells */,
 				A704480723484EB500AA06D9 /* SubViews */,
 			);
 			path = Views;
@@ -121,7 +129,8 @@
 		A70447F523483F1400AA06D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A704480C2348770C00AA06D9 /* Users */,
+				A704480D2348772500AA06D9 /* User.swift */,
+				A75A5B432350AFD60063B7D2 /* Country.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,14 +203,6 @@
 			path = SubViews;
 			sourceTree = "<group>";
 		};
-		A704480C2348770C00AA06D9 /* Users */ = {
-			isa = PBXGroup;
-			children = (
-				A704480D2348772500AA06D9 /* User.swift */,
-			);
-			path = Users;
-			sourceTree = "<group>";
-		};
 		A7066D3B234AD67C00307808 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +249,22 @@
 				A72251C22347E813001A365C /* Info.plist */,
 			);
 			path = portfolioApp;
+			sourceTree = "<group>";
+		};
+		A75A5B3D2350AE4D0063B7D2 /* SubControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */,
+			);
+			path = SubControllers;
+			sourceTree = "<group>";
+		};
+		A75A5B402350AEC70063B7D2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A75A5B412350AEF40063B7D2 /* countryListCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A70448042348409200AA06D9 /* SignInViewController.swift in Sources */,
+				A75A5B422350AEF40063B7D2 /* countryListCell.swift in Sources */,
 				A72251B92347E811001A365C /* ViewController.swift in Sources */,
 				A7044806234840B800AA06D9 /* SignUpViewController.swift in Sources */,
 				A7066D3E234ADD3500307808 /* ToastMessage.swift in Sources */,
@@ -393,6 +411,8 @@
 				A704480B2348510600AA06D9 /* UIButton.swift in Sources */,
 				A70268A32349A71200212E14 /* UserManager.swift in Sources */,
 				A70268A52349B05100212E14 /* UIViewController.swift in Sources */,
+				A75A5B442350AFD60063B7D2 /* Country.swift in Sources */,
+				A75A5B3F2350AE830063B7D2 /* CountryListViewController.swift in Sources */,
 				A70448022348407700AA06D9 /* WelcomeViewController.swift in Sources */,
 				A70383A1234B528200E621F4 /* locationTrackerViewController.swift in Sources */,
 				A704480923484EE100AA06D9 /* UIImage.swift in Sources */,

@@ -8,6 +8,8 @@
 
 import UIKit
 
+var countryCodeString: String?
+
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var imageBtn: UIButton!
@@ -25,6 +27,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTxtField: UITextField!
     
     var userManager = UserManager()
+    
+    var countryListVC: CountryListViewController?
+    
+    var sample: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +49,16 @@ class SignUpViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.countryListVC?.signUpVC = self
+        
+        self.sample += 1
+        
+        self.countryCodeBtn.setTitle("\(countryCodeString ?? "+63")", for: .normal)
+        
+    }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -59,13 +75,19 @@ class SignUpViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    @IBAction func countryCodeBtnWasPressed(_ sender: Any) {
+        guard let countryView = self.storyboard?.instantiateViewController(withIdentifier: "CountryListViewController") as? CountryListViewController else { return }
+        countryView.modalPresentationStyle = .fullScreen
+        self.show(countryView, sender: self)
+    }
+    
     @IBAction func signUpBtnWasPressed(_ sender: Any) {
         
         print("Sign Up Button Was Pressed")
         
         let user = User(firstName: firstNameTxtField.text ?? "",
                         lastName: lastNameTxtField.text ?? "",
-                        countryCode: "",
+                        countryCode: countryCodeString ?? "+63",
                         mobileNumber: contactNumberTxtField.text ?? "",
                         emailAddress: emailAddressTxtField.text ?? "",
                         profileImage: "")

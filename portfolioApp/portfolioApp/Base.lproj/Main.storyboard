@@ -147,19 +147,27 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-ma-FeA" customClass="GMSMapView">
-                                <rect key="frame" x="53.5" y="264.5" width="307" height="367"/>
+                                <rect key="frame" x="0.0" y="211" width="414" height="475"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="307" id="kgJ-qN-yiA"/>
-                                    <constraint firstAttribute="height" constant="367" id="qRv-eW-Mr0"/>
+                                    <constraint firstAttribute="height" constant="475" id="iiH-o3-2WR"/>
+                                    <constraint firstAttribute="width" constant="414" id="s5k-Hi-DXp"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWP-bF-fLy">
+                                <rect key="frame" x="85" y="716" width="245" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="FINISH TRACK"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fEB-ma-FeA" firstAttribute="centerY" secondItem="Mzt-QM-cvF" secondAttribute="centerY" id="G28-hX-JwB"/>
+                            <constraint firstItem="fEB-ma-FeA" firstAttribute="top" secondItem="C4W-0Q-znx" secondAttribute="bottom" constant="83" id="NhS-HY-GLw"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="leading" secondItem="BXE-aR-0P8" secondAttribute="leading" id="RpT-9B-iur"/>
-                            <constraint firstItem="fEB-ma-FeA" firstAttribute="centerX" secondItem="Mzt-QM-cvF" secondAttribute="centerX" id="gjN-Of-Wnn"/>
+                            <constraint firstItem="fEB-ma-FeA" firstAttribute="leading" secondItem="BXE-aR-0P8" secondAttribute="leading" id="YzT-HK-bJ9"/>
+                            <constraint firstItem="fEB-ma-FeA" firstAttribute="trailing" secondItem="BXE-aR-0P8" secondAttribute="trailing" id="ljk-mr-FOx"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="top" secondItem="Mzt-QM-cvF" secondAttribute="top" id="ueJ-hO-H71"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="trailing" secondItem="BXE-aR-0P8" secondAttribute="trailing" id="yQg-LF-8kA"/>
                         </constraints>
@@ -172,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwa-tv-9OV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="829" y="1523"/>
+            <point key="canvasLocation" x="828.98550724637687" y="1522.7678571428571"/>
         </scene>
         <!--Home-->
         <scene sceneID="DpQ-l2-OWu">
@@ -451,16 +459,16 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nQ8-NG-meH">
-                                <rect key="frame" x="83" y="388.5" width="281" height="34"/>
+                                <rect key="frame" x="128" y="388.5" width="236" height="34"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bd8-DG-y2W">
                                 <rect key="frame" x="50" y="430.5" width="314" height="34"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y9Z-fE-9Ul">
                                 <rect key="frame" x="50" y="472.5" width="314" height="34"/>
@@ -495,16 +503,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2D-EW-7N0">
-                                <rect key="frame" x="50" y="388.5" width="30" height="34"/>
+                                <rect key="frame" x="50" y="388.5" width="70" height="34"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="PYU-Td-5l6"/>
-                                    <constraint firstAttribute="width" constant="30" id="meW-7Y-5S1"/>
+                                    <constraint firstAttribute="width" constant="70" id="meW-7Y-5S1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="+63">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="countryCodeBtnWasPressed:" destination="AvT-NS-Oc2" eventType="touchUpInside" id="OnG-In-h8f"/>
+                                </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dst-qI-4SW">
                                 <rect key="frame" x="20" y="92" width="374" height="50"/>
@@ -548,7 +559,7 @@
                             <constraint firstItem="Dst-qI-4SW" firstAttribute="top" secondItem="ARw-8d-xqJ" secondAttribute="bottom" constant="8" id="elf-qR-05h"/>
                             <constraint firstItem="ovv-29-Rg9" firstAttribute="trailing" secondItem="Dst-qI-4SW" secondAttribute="trailing" constant="20" id="g6a-WE-WJx"/>
                             <constraint firstItem="oWi-u7-838" firstAttribute="top" secondItem="3Od-gm-2BA" secondAttribute="top" id="hJX-gd-dZ2"/>
-                            <constraint firstItem="nQ8-NG-meH" firstAttribute="leading" secondItem="k2D-EW-7N0" secondAttribute="trailing" constant="3" id="iXx-cC-dGg"/>
+                            <constraint firstItem="nQ8-NG-meH" firstAttribute="leading" secondItem="k2D-EW-7N0" secondAttribute="trailing" constant="8" id="iXx-cC-dGg"/>
                             <constraint firstItem="ovv-29-Rg9" firstAttribute="trailing" secondItem="Bd8-DG-y2W" secondAttribute="trailing" constant="50" id="jsf-P7-fMe"/>
                             <constraint firstItem="ovv-29-Rg9" firstAttribute="trailing" secondItem="nQ8-NG-meH" secondAttribute="trailing" constant="50" id="nSy-Ku-EwF"/>
                             <constraint firstItem="nQ8-NG-meH" firstAttribute="top" secondItem="bhT-iY-GND" secondAttribute="bottom" constant="8" id="nfZ-FK-Tk9"/>
@@ -578,10 +589,10 @@
             </objects>
             <point key="canvasLocation" x="1537.68115942029" y="126.5625"/>
         </scene>
-        <!--View Controller-->
+        <!--Country List View Controller-->
         <scene sceneID="KaP-Kd-xVj">
             <objects>
-                <viewController id="vvz-gG-WOY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountryListViewController" id="vvz-gG-WOY" customClass="CountryListViewController" customModule="portfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rqy-PG-9Lh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -595,6 +606,7 @@
                                 <color key="tintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="clear.fill" catalog="system"/>
                                 <connections>
+                                    <action selector="backBtnWasPressed:" destination="vvz-gG-WOY" eventType="touchUpInside" id="7af-2t-Gl5"/>
                                     <action selector="backBtnWasPressed:" destination="AvT-NS-Oc2" eventType="touchUpInside" id="zyz-gT-0Uy"/>
                                 </connections>
                             </button>
@@ -602,13 +614,43 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="770"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dNQ-ED-fgd">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countryListCell" id="dNQ-ED-fgd" customClass="countryListCell" customModule="portfolioApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dNQ-ED-fgd" id="lJS-BP-Pk7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yn7-2e-ned">
+                                                    <rect key="frame" x="20" y="11" width="299" height="18.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5d-uE-gyT">
+                                                    <rect key="frame" x="327" y="11" width="67" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="67" id="pzn-4i-mHm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q5d-uE-gyT" firstAttribute="top" secondItem="lJS-BP-Pk7" secondAttribute="topMargin" id="GhC-5X-i6T"/>
+                                                <constraint firstItem="Yn7-2e-ned" firstAttribute="leading" secondItem="lJS-BP-Pk7" secondAttribute="leadingMargin" id="Ksv-md-jl3"/>
+                                                <constraint firstItem="Yn7-2e-ned" firstAttribute="top" secondItem="lJS-BP-Pk7" secondAttribute="topMargin" id="Nc4-Kc-3zk"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Yn7-2e-ned" secondAttribute="bottom" constant="0.5" id="OZ9-si-teb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="q5d-uE-gyT" secondAttribute="bottom" constant="1" id="bmw-QD-cN6"/>
+                                                <constraint firstItem="q5d-uE-gyT" firstAttribute="trailing" secondItem="lJS-BP-Pk7" secondAttribute="trailingMargin" id="sva-yE-VY7"/>
+                                                <constraint firstItem="q5d-uE-gyT" firstAttribute="leading" secondItem="Yn7-2e-ned" secondAttribute="trailing" constant="8" id="uQl-cq-D4Z"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryCode" destination="q5d-uE-gyT" id="rR6-Hy-J5l"/>
+                                            <outlet property="countryName" destination="Yn7-2e-ned" id="FXB-gY-LmU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -624,6 +666,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8Zb-hB-iba"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="H34-uL-uOu" id="h7S-JI-fID"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TbQ-gA-0vv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
