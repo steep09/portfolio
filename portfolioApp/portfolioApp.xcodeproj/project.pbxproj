@@ -27,6 +27,7 @@
 		A72251BC2347E811001A365C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72251BA2347E811001A365C /* Main.storyboard */; };
 		A72251BE2347E813001A365C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72251BD2347E813001A365C /* Assets.xcassets */; };
 		A72251C12347E813001A365C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A72251BF2347E813001A365C /* LaunchScreen.storyboard */; };
+		A74E8A652353290F00E5B4B1 /* locationTrackerMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74E8A642353290F00E5B4B1 /* locationTrackerMainViewController.swift */; };
 		A75A5B3F2350AE830063B7D2 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */; };
 		A75A5B422350AEF40063B7D2 /* countryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B412350AEF40063B7D2 /* countryListCell.swift */; };
 		A75A5B442350AFD60063B7D2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B432350AFD60063B7D2 /* Country.swift */; };
@@ -57,6 +58,7 @@
 		A72251BD2347E813001A365C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A72251C02347E813001A365C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A72251C22347E813001A365C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74E8A642353290F00E5B4B1 /* locationTrackerMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationTrackerMainViewController.swift; sourceTree = "<group>"; };
 		A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		A75A5B412350AEF40063B7D2 /* countryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryListCell.swift; sourceTree = "<group>"; };
 		A75A5B432350AFD60063B7D2 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -99,12 +101,13 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		A703839F234B524800E621F4 /* SubServicesScreen */ = {
+		A703839F234B524800E621F4 /* locationTrackerService */ = {
 			isa = PBXGroup;
 			children = (
-				A70383A0234B528200E621F4 /* locationTrackerViewController.swift */,
+				A74E8A662353293200E5B4B1 /* locationTracker */,
+				A74E8A642353290F00E5B4B1 /* locationTrackerMainViewController.swift */,
 			);
-			path = SubServicesScreen;
+			path = locationTrackerService;
 			sourceTree = "<group>";
 		};
 		A70447F323483F0500AA06D9 /* Controllers */ = {
@@ -155,7 +158,7 @@
 		A70447F823483F5C00AA06D9 /* ServicesScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A703839F234B524800E621F4 /* SubServicesScreen */,
+				A703839F234B524800E621F4 /* locationTrackerService */,
 				A70447FB2348400500AA06D9 /* ServiceViewController.swift */,
 			);
 			path = ServicesScreen;
@@ -249,6 +252,14 @@
 				A72251C22347E813001A365C /* Info.plist */,
 			);
 			path = portfolioApp;
+			sourceTree = "<group>";
+		};
+		A74E8A662353293200E5B4B1 /* locationTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A70383A0234B528200E621F4 /* locationTrackerViewController.swift */,
+			);
+			path = locationTracker;
 			sourceTree = "<group>";
 		};
 		A75A5B3D2350AE4D0063B7D2 /* SubControllers */ = {
@@ -405,6 +416,7 @@
 				A75A5B422350AEF40063B7D2 /* countryListCell.swift in Sources */,
 				A72251B92347E811001A365C /* ViewController.swift in Sources */,
 				A7044806234840B800AA06D9 /* SignUpViewController.swift in Sources */,
+				A74E8A652353290F00E5B4B1 /* locationTrackerMainViewController.swift in Sources */,
 				A7066D3E234ADD3500307808 /* ToastMessage.swift in Sources */,
 				A70447FA23483FDF00AA06D9 /* HomeTabViewController.swift in Sources */,
 				A72251B52347E811001A365C /* AppDelegate.swift in Sources */,
