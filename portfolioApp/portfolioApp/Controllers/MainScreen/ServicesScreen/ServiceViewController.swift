@@ -18,7 +18,7 @@ class ServiceViewController: UIViewController {
     
     @IBAction func locationTrackerBtnWasPressed(_ sender: Any) {
         
-        guard let locationTracker = self.storyboard?.instantiateViewController(withIdentifier: "locationTrackerMainViewController") else { return }
+        guard let locationTracker = self.storyboard?.instantiateViewController(withIdentifier: "locationTrackerMainViewController") as? UIViewController else { return }
         locationTracker.modalPresentationStyle = .fullScreen
         self.present(locationTracker, animated: true)
         print("BUTTON PRESSED")

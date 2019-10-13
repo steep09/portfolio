@@ -27,5 +27,9 @@ class locationTrackerViewController: UIViewController {
     @IBAction func backBtnWasPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func finishTrackingBtnWasPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

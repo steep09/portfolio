@@ -142,7 +142,7 @@
         <!--Location Tracker Main View Controller-->
         <scene sceneID="iVF-yU-Hdt">
             <objects>
-                <viewController id="zEf-Dz-dJ5" customClass="locationTrackerMainViewController" customModule="portfolioApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="locationTrackerMainViewController" id="zEf-Dz-dJ5" customClass="locationTrackerMainViewController" customModule="portfolioApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wi4-Rh-Q9O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,6 +173,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeP-gC-SVh">
                                 <rect key="frame" x="139" y="227" width="137" height="100"/>
                                 <state key="normal" image="icons8-location-100"/>
+                                <connections>
+                                    <action selector="locationTrackerBtnWasPressed:" destination="zEf-Dz-dJ5" eventType="touchUpInside" id="9bL-Tn-DTT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iz9-B5-avZ">
                                 <rect key="frame" x="20" y="474" width="374" height="352"/>
@@ -308,10 +311,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-ma-FeA" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="211" width="414" height="475"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="549"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="475" id="iiH-o3-2WR"/>
+                                    <constraint firstAttribute="height" constant="549" id="iiH-o3-2WR"/>
                                     <constraint firstAttribute="width" constant="414" id="s5k-Hi-DXp"/>
                                 </constraints>
                             </view>
@@ -321,11 +324,14 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="FINISH TRACK"/>
+                                <connections>
+                                    <action selector="finishTrackingBtnWasPressed:" destination="yt5-AY-AGL" eventType="touchUpInside" id="VaP-m3-nvU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="fEB-ma-FeA" firstAttribute="top" secondItem="C4W-0Q-znx" secondAttribute="bottom" constant="83" id="NhS-HY-GLw"/>
+                            <constraint firstItem="fEB-ma-FeA" firstAttribute="top" secondItem="C4W-0Q-znx" secondAttribute="bottom" id="NhS-HY-GLw"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="leading" secondItem="BXE-aR-0P8" secondAttribute="leading" id="RpT-9B-iur"/>
                             <constraint firstItem="fEB-ma-FeA" firstAttribute="leading" secondItem="BXE-aR-0P8" secondAttribute="leading" id="YzT-HK-bJ9"/>
                             <constraint firstItem="fEB-ma-FeA" firstAttribute="trailing" secondItem="BXE-aR-0P8" secondAttribute="trailing" id="ljk-mr-FOx"/>
@@ -341,7 +347,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fwa-tv-9OV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="1523"/>
+            <point key="canvasLocation" x="1537.68115942029" y="1522.7678571428571"/>
         </scene>
         <!--Home-->
         <scene sceneID="DpQ-l2-OWu">
