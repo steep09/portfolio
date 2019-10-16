@@ -11,17 +11,26 @@ import GoogleMaps
 
 class locationTrackerViewController: UIViewController {
     
-    @IBOutlet weak var mapView: UIView!
+    @IBOutlet weak var mapView: GMSMapView!
+    
+    var locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.layer.masksToBounds = false
-        mapView.layer.shadowOpacity = 1
-        mapView.layer.shadowRadius = 5
-        mapView.layer.shadowOffset = .zero
-        mapView.layer.borderWidth = 5
-        mapView.layer.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        mapView.viewLayout()
+        
+        self.mapView.delegate = self as? GMSMapViewDelegate
+        self.mapView.isMyLocationEnabled = true
+        
+        locationManager = CLLocationManager()
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.distanceFilter = 10
+        locationManager.startUpdatingLocation()
+        locationManager.delegate = self
+        
+        self.locationManager.startUpdatingLocation()
     }
     
     @IBAction func backBtnWasPressed(_ sender: Any) {
@@ -32,4 +41,16 @@ class locationTrackerViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
+}
+extension locationTrackerViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last!
+        
+        let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude, longitude: location.coordinate.longitude, zoom: 10.0)
+        self.mapView.animate(to: camera)
+        
+        self.locationManager.stopUpdatingLocation()
+    }
+    
 }

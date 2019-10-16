@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //This API Key is for GoogleMaps pod.
         // here is the link https://developers.google.com/maps/documentation/ios-sdk/views
-        GMSServices.provideAPIKey("AIzaSyBpswBL_Owef-P5PvubLf2N2R9FNogWwqs")
+        GMSServices.provideAPIKey("AIzaSyDIfH4IfCw4ST6sn7W9xylQx3ubgn2yo4k")
         
         print("NO CURRENT USER: \(Auth.auth().currentUser == nil)")
         window = UIWindow(frame: UIScreen.main.bounds)

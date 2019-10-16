@@ -315,13 +315,15 @@
                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="549" id="iiH-o3-2WR"/>
-                                    <constraint firstAttribute="width" constant="414" id="s5k-Hi-DXp"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="414" id="s5k-Hi-DXp"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWP-bF-fLy">
-                                <rect key="frame" x="85" y="716" width="245" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWP-bF-fLy">
+                                <rect key="frame" x="107" y="716" width="200" height="30"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4tK-Ge-iAM"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="FINISH TRACK"/>
                                 <connections>
@@ -334,7 +336,9 @@
                             <constraint firstItem="fEB-ma-FeA" firstAttribute="top" secondItem="C4W-0Q-znx" secondAttribute="bottom" id="NhS-HY-GLw"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="leading" secondItem="BXE-aR-0P8" secondAttribute="leading" id="RpT-9B-iur"/>
                             <constraint firstItem="fEB-ma-FeA" firstAttribute="leading" secondItem="BXE-aR-0P8" secondAttribute="leading" id="YzT-HK-bJ9"/>
+                            <constraint firstItem="ZWP-bF-fLy" firstAttribute="centerX" secondItem="Mzt-QM-cvF" secondAttribute="centerX" id="adk-mt-BKu"/>
                             <constraint firstItem="fEB-ma-FeA" firstAttribute="trailing" secondItem="BXE-aR-0P8" secondAttribute="trailing" id="ljk-mr-FOx"/>
+                            <constraint firstItem="ZWP-bF-fLy" firstAttribute="top" secondItem="fEB-ma-FeA" secondAttribute="bottom" constant="39" id="mMW-50-ND9"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="top" secondItem="Mzt-QM-cvF" secondAttribute="top" id="ueJ-hO-H71"/>
                             <constraint firstItem="C4W-0Q-znx" firstAttribute="trailing" secondItem="BXE-aR-0P8" secondAttribute="trailing" id="yQg-LF-8kA"/>
                         </constraints>
@@ -852,7 +856,7 @@
         <image name="icons8-location-100" width="100" height="100"/>
         <image name="location.circle.fill" catalog="system" width="64" height="60"/>
         <image name="power" catalog="system" width="64" height="62"/>
-        <image name="square.fill.on.square.fill" catalog="system" width="32" height="32"/>
+        <image name="square.fill.on.square.fill" catalog="system" width="64" height="56"/>
         <image name="tray.fill" catalog="system" width="64" height="44"/>
     </resources>
 </document>
