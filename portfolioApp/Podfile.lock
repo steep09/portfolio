@@ -155,8 +155,6 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.10.0)
-  - Unbox (4.0.0)
-  - Wrap (3.0.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -170,8 +168,6 @@ DEPENDENCIES:
   - GooglePlacePicker
   - GooglePlaces
   - LocationManagerSwift
-  - Unbox
-  - Wrap
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -203,8 +199,6 @@ SPEC REPOS:
     - LocationManagerSwift
     - nanopb
     - Protobuf
-    - Unbox
-    - Wrap
 
 SPEC CHECKSUMS:
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
@@ -235,9 +229,7 @@ SPEC CHECKSUMS:
   LocationManagerSwift: b3d520b26788f5c2213bfd6a8699967937a81f58
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
-  Unbox: d2677af8fde59a30141e02981b11cb6a0e3b6bc5
-  Wrap: 918fdb5157e4f701f9503b2633752d6f94616f84
 
-PODFILE CHECKSUM: 55120b74ed5a8b1466b4cc3bee03bb718b4c2976
+PODFILE CHECKSUM: 2bd5a9999d1ca6a9ad74094abab53e6c544d9e75
 
 COCOAPODS: 1.8.3
