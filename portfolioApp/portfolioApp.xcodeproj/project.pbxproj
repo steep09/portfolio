@@ -32,6 +32,9 @@
 		A753C436235BC42F0058712F /* MessagingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753C435235BC42F0058712F /* MessagingViewController.swift */; };
 		A753C438235BC5230058712F /* messagingListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753C437235BC5230058712F /* messagingListCell.swift */; };
 		A753C43A235BC5B40058712F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753C439235BC5B40058712F /* Message.swift */; };
+		A75636B8235F0DAE00B7ABC5 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75636B7235F0DAE00B7ABC5 /* FirestoreManager.swift */; };
+		A75636BB235F0E1600B7ABC5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75636BA235F0E1600B7ABC5 /* ProfileViewController.swift */; };
+		A75636BD235F0E2800B7ABC5 /* ProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75636BC235F0E2800B7ABC5 /* ProfileModel.swift */; };
 		A75A5B3F2350AE830063B7D2 /* CountryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */; };
 		A75A5B422350AEF40063B7D2 /* countryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B412350AEF40063B7D2 /* countryListCell.swift */; };
 		A75A5B442350AFD60063B7D2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75A5B432350AFD60063B7D2 /* Country.swift */; };
@@ -67,6 +70,9 @@
 		A753C435235BC42F0058712F /* MessagingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagingViewController.swift; sourceTree = "<group>"; };
 		A753C437235BC5230058712F /* messagingListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = messagingListCell.swift; sourceTree = "<group>"; };
 		A753C439235BC5B40058712F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		A75636B7235F0DAE00B7ABC5 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		A75636BA235F0E1600B7ABC5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A75636BC235F0E2800B7ABC5 /* ProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileModel.swift; sourceTree = "<group>"; };
 		A75A5B3E2350AE830063B7D2 /* CountryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListViewController.swift; sourceTree = "<group>"; };
 		A75A5B412350AEF40063B7D2 /* countryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = countryListCell.swift; sourceTree = "<group>"; };
 		A75A5B432350AFD60063B7D2 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 		A70447F623483F2C00AA06D9 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
+				A75636B9235F0DF700B7ABC5 /* ProfileScreen */,
 				A753C434235BC3B20058712F /* MessagingScreen */,
 				A70447F823483F5C00AA06D9 /* ServicesScreen */,
 				A70447F723483F4800AA06D9 /* HomeScreen */,
@@ -249,6 +256,7 @@
 		A72251B32347E811001A365C /* portfolioApp */ = {
 			isa = PBXGroup;
 			children = (
+				A75636B6235F0D9400B7ABC5 /* Manager */,
 				A7066D3B234AD67C00307808 /* Extensions */,
 				A70268A12349A6FE00212E14 /* Managers */,
 				A70447F523483F1400AA06D9 /* Models */,
@@ -279,6 +287,23 @@
 				A753C435235BC42F0058712F /* MessagingViewController.swift */,
 			);
 			path = MessagingScreen;
+			sourceTree = "<group>";
+		};
+		A75636B6235F0D9400B7ABC5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A75636B7235F0DAE00B7ABC5 /* FirestoreManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A75636B9235F0DF700B7ABC5 /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A75636BA235F0E1600B7ABC5 /* ProfileViewController.swift */,
+				A75636BC235F0E2800B7ABC5 /* ProfileModel.swift */,
+			);
+			path = ProfileScreen;
 			sourceTree = "<group>";
 		};
 		A75A5B3D2350AE4D0063B7D2 /* SubControllers */ = {
@@ -439,11 +464,14 @@
 				A7044806234840B800AA06D9 /* SignUpViewController.swift in Sources */,
 				A753C436235BC42F0058712F /* MessagingViewController.swift in Sources */,
 				A74E8A652353290F00E5B4B1 /* locationTrackerMainViewController.swift in Sources */,
+				A75636B8235F0DAE00B7ABC5 /* FirestoreManager.swift in Sources */,
 				A7066D3E234ADD3500307808 /* ToastMessage.swift in Sources */,
 				A70447FA23483FDF00AA06D9 /* HomeTabViewController.swift in Sources */,
 				A72251B52347E811001A365C /* AppDelegate.swift in Sources */,
 				A704480B2348510600AA06D9 /* UIButton.swift in Sources */,
 				A70268A32349A71200212E14 /* UserManager.swift in Sources */,
+				A75636BD235F0E2800B7ABC5 /* ProfileModel.swift in Sources */,
+				A75636BB235F0E1600B7ABC5 /* ProfileViewController.swift in Sources */,
 				A753C438235BC5230058712F /* messagingListCell.swift in Sources */,
 				A70268A52349B05100212E14 /* UIViewController.swift in Sources */,
 				A75A5B442350AFD60063B7D2 /* Country.swift in Sources */,
