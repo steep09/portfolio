@@ -68,6 +68,8 @@ class SignUpViewController: UIViewController {
         
         print("Image Button was pressed")
         
+        imageBtn.isHidden = true
+        imageProfile.isHidden = false
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         vc.allowsEditing = true
